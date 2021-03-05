@@ -1,0 +1,5 @@
+container:
+  type: DataRowPanel
+  event_bindings: {hide: name, refreshing_data_bindings: name}
+components: []
+is_package: true

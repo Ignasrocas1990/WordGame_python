@@ -1,0 +1,76 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+  event_bindings: {refreshing_data_bindings: loose_repeating_panel}
+components:
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: ColumnPanel
+  properties: {col_widths: '{"MMNRQR":40}'}
+  name: column_panel_1
+  layout_properties: {slot: default}
+  components:
+  - type: FlowPanel
+    properties: {}
+    name: flow_panel_1
+    layout_properties: {grid_position: 'ETZFFT,MMNRQR'}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Congradulations!, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'ETZFFT,DXENDE'}
+    - type: Label
+      properties: {}
+      name: seconds
+      layout_properties: {grid_position: 'ETZFFT,JWOHTY'}
+      event_bindings: {hide: loose_repeating_panel}
+      data_bindings:
+      - {property: text, code: 'self.item[''seconds'']'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: seconds., font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'ETZFFT,FEJBGW'}
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: You're a winner!, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'PXNVNU,ULKDOB'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Well done, you''ve won!', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4
+    layout_properties: {grid_position: 'RLPGCA,YQFYJJ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter your name: ', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'WMRNKO,YDRVRE'}
+    event_bindings: {hide: name}
+  - type: TextBox
+    properties: {}
+    name: name
+    layout_properties: {grid_position: 'WMRNKO,QBPZGS'}
+    event_bindings: {pressed_enter: name}
+  - type: Button
+    properties: {role: primary-color, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Record score!, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'KSTOXV,YTJVJM'}
+    event_bindings: {click: button_1_click}

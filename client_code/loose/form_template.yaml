@@ -1,0 +1,54 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+  event_bindings: {refreshing_data_bindings: label}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: RepeatingPanel
+    properties: {item_template: loose.ItemTemplate1}
+    name: repeating_panel_loose
+    layout_properties: {grid_position: 'YFSSCM,YUQNOL'}
+    event_bindings: {hide: loose_repeating_panel}
+    data_bindings: []
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Better luck next time., font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label
+    layout_properties: {grid_position: 'NAWKQF,IQDTHB'}
+    event_bindings: {hide: label}
+  - type: Label
+    properties: {role: text, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Look's like you have to try harder..., font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: text
+    layout_properties: {grid_position: 'WZBGCX,LJEGMS'}
+    event_bindings: {hide: label}
+  - type: Button
+    properties: {role: primary-color, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: 'play again?', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: play
+    layout_properties: {grid_position: 'LWIIUS,MZLBND'}
+    event_bindings: {click: play_click}
+  - type: Button
+    properties: {role: primary-color, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Review the rules, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: main
+    layout_properties: {grid_position: 'HEUKNP,OAUVID'}
+    event_bindings: {click: main_click}
+  event_bindings: {hide: name}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}

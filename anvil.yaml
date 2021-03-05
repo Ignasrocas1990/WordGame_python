@@ -1,0 +1,117 @@
+dependencies: []
+services:
+- source: /runtime/services/google.yml
+  client_config:
+    app_files:
+    - capabilities: {canCopy: true, canEdit: true}
+      editable: true
+      copyable: true
+      webContentLink: https://drive.google.com/uc?id=1WBUMRIMQleyaVWAZaaFcO5cAMrd6e_I3&export=download
+      embedLink: https://drive.google.com/file/d/1WBUMRIMQleyaVWAZaaFcO5cAMrd6e_I3/preview?usp=drivesdk
+      fileExtension: ''
+      copyRequiresWriterPermission: false
+      python_name: words
+      explicitlyTrashed: false
+      lastModifyingUser:
+        kind: drive#user
+        displayName: ignas rocas
+        picture: {url: 'https://lh3.googleusercontent.com/a-/AOh14Gip-fYtpnr2GQ6NmEF6_t0kNJu1NxgH7odaFLPVUw=s64'}
+        isAuthenticatedUser: true
+        permissionId: '15752286383893350864'
+        emailAddress: ignasandholly@gmail.com
+      shared: false
+      createdDate: '2021-01-20T14:53:34.202Z'
+      id: 1WBUMRIMQleyaVWAZaaFcO5cAMrd6e_I3
+      owners:
+      - kind: drive#user
+        displayName: ignas rocas
+        picture: {url: 'https://lh3.googleusercontent.com/a-/AOh14Gip-fYtpnr2GQ6NmEF6_t0kNJu1NxgH7odaFLPVUw=s64'}
+        isAuthenticatedUser: true
+        permissionId: '15752286383893350864'
+        emailAddress: ignasandholly@gmail.com
+      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
+      spaces: [drive]
+      parents:
+      - {kind: drive#parentReference, id: 1eEQ7i1ElHYxwsvsiZT04A5PhCLr4v5ZK, selfLink: 'https://www.googleapis.com/drive/v2/files/1WBUMRIMQleyaVWAZaaFcO5cAMrd6e_I3/parents/1eEQ7i1ElHYxwsvsiZT04A5PhCLr4v5ZK',
+        parentLink: 'https://www.googleapis.com/drive/v2/files/1eEQ7i1ElHYxwsvsiZT04A5PhCLr4v5ZK',
+        isRoot: false}
+      labels: {starred: false, hidden: false, trashed: false, restricted: false, viewed: true}
+      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/octet-stream
+      headRevisionId: 0B2vMbp4_ZZtXcFdta251MW1pZ3NHcDkvdXVzU0lvS0paUDhVPQ
+      selfLink: https://www.googleapis.com/drive/v2/files/1WBUMRIMQleyaVWAZaaFcO5cAMrd6e_I3
+      lastViewedByMeDate: '2021-01-20T14:54:00.686Z'
+      userPermission: {kind: drive#permission, etag: '"ZH41uT78B-ikawRuR-H_hsEk2B4"',
+        id: me, selfLink: 'https://www.googleapis.com/drive/v2/files/1WBUMRIMQleyaVWAZaaFcO5cAMrd6e_I3/permissions/me',
+        role: owner, type: user}
+      lastModifyingUserName: ignas rocas
+      etag: '"MTYxMTA3OTUxODAwMA"'
+      kind: drive#file
+      modifiedByMeDate: '2021-01-19T18:05:18.000Z'
+      title: words
+      version: '3'
+      appDataContents: false
+      writersCanShare: true
+      fileSize: '976241'
+      alternateLink: https://drive.google.com/file/d/1WBUMRIMQleyaVWAZaaFcO5cAMrd6e_I3/view?usp=drivesdk
+      mimeType: application/octet-stream
+      modifiedDate: '2021-01-19T18:05:18.000Z'
+      downloadUrl: https://www.googleapis.com/drive/v2/files/1WBUMRIMQleyaVWAZaaFcO5cAMrd6e_I3?alt=media&source=downloadUrl
+      quotaBytesUsed: '976241'
+      md5Checksum: 7d06f540d0a65a46e6d65c5254edb21f
+      originalFilename: words
+      ownerNames: [ignas rocas]
+  server_config: {delegation_refresh_token: 1//0336Xm5OpphWiCgYIARAAGAMSNwF-L9IrfIgkio40uW5szmZP6aAvUKX8B6k31vV1sBeNV0iXwAevt8UTy6C4n247kd5p9_MgNDM}
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {auto_create_missing_columns: false}
+package_name: C00135830_wordgame4
+allow_embedding: false
+name: C00135830-wordgame4
+runtime_options: {version: 2, client_version: '3', server_version: python3-full}
+metadata: {}
+startup_form: main
+native_deps: {head_html: ''}
+db_schema:
+- name: scores
+  id: 106353
+  python_name: scores
+  columns:
+    BID6zAu9t_8=:
+      name: TimeStamp
+      type: datetime
+      admin_ui: {order: 7, width: 200}
+    3b7T1qwmsqA=:
+      name: Time
+      type: number
+      admin_ui: {order: -2, width: 200}
+    Tji5FkF64gc=:
+      name: IPaddress
+      type: string
+      admin_ui: {order: 6, width: 200}
+    qOFEoedzU2I=:
+      name: errors
+      type: simpleObject
+      admin_ui: {order: 9, width: 200}
+    Dh8P93J3Vic=:
+      name: Winner
+      type: bool
+      admin_ui: {order: 8, width: 200}
+    AOKeqYPm2bg=:
+      name: Matches
+      type: string
+      admin_ui: {order: 3, width: 200}
+    Eq+gI_GZEIQ=:
+      name: Sourceword
+      type: string
+      admin_ui: {order: 1, width: 200}
+    P4N3yCPoD7w=:
+      name: UAG
+      type: string
+      admin_ui: {order: 7, width: 200}
+    n9TASGBuACw=:
+      name: Who
+      type: string
+      admin_ui: {order: -1, width: 200}
+  access: {python_name: scores, app_id: DXPXVIQVMHM2MKYI, server: full, client: search,
+    table_mapping_name: null, table_mapping_id: null, table_id: 106353}
+renamed: true

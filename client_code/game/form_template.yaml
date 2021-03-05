@@ -1,0 +1,76 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+  event_bindings: {refreshing_data_bindings: label}
+components:
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{"QDRFFR":10}',
+    spacing_below: small, background: ''}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Let's get busy!, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'ZLBLCA,GPLDIM'}
+  - type: Label
+    properties: {role: text, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'he clock is ticking...
+
+        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'MEANCS,YTSYZW'}
+  - type: FlowPanel
+    properties: {}
+    name: flow_panel_1
+    layout_properties: {grid_position: 'CINJRI,QDRFFR'}
+    components:
+    - type: Label
+      properties: {role: text, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'You word is:', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'CINJRI,QDRFFR QZKJRU,VEFDQG'}
+    - type: Label
+      properties: {role: text, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: keyword
+      layout_properties: {grid_position: 'CINJRI,UZQUBL'}
+      data_bindings: []
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter your seven words in this box, separating each word
+        by a space:', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'DHNEAJ,OAWCIX'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: guesses
+    layout_properties: {grid_position: 'MLMKLD,TIYUJJ', full_width_row: false}
+    event_bindings: {}
+  - type: Button
+    properties: {role: primary-color, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Done!, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'RGHZBH,ZUWZKG'}
+    event_bindings: {click: button_1_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}

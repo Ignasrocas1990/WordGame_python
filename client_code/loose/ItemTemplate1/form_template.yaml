@@ -1,0 +1,13 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+  event_bindings: {refreshing_data_bindings: label}
+  data_bindings: []
+components:
+- type: Label
+  properties: {}
+  name: errors
+  layout_properties: {grid_position: 'XXCGYW,SFNECR'}
+  data_bindings:
+  - {property: text, code: 'self.item["error"]'}
+is_package: true

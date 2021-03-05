@@ -1,0 +1,96 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+  event_bindings: {refreshing_data_bindings: loose_repeating_panel, hide: name, click: name}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: FlowPanel
+    properties: {}
+    name: flow_panel_1
+    layout_properties: {grid_position: 'IFFWYX,PCIPKL'}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'You were placed in position : ', font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'IFFWYX,ITKGLC'}
+    - type: Label
+      properties: {}
+      name: label_curr
+      layout_properties: {grid_position: 'IFFWYX,PBFHZS'}
+      event_bindings: {hide: name}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: ' out of ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {}
+    - type: Label
+      properties: {}
+      name: label_total
+      layout_properties: {}
+      event_bindings: {hide: name}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: players, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_5
+      layout_properties: {}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: QTRASN, title: Position, data_key: Position, width: '70', expand: false}
+      - {id: ORONEG, title: Time, data_key: Time, width: '60', expand: false}
+      - {id: DGMBHL, title: Who, data_key: Who, width: '200', expand: false}
+      - {id: BFMISY, title: Sourceword, data_key: Sourceword}
+      - {id: TVLNZU, title: Matches, data_key: Matches}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 10
+      visible: true
+      show_page_controls: false
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'IXFXBM,ROCRUB'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Display.RowTemplate1}
+      name: repeating_panel_winners
+      layout_properties: {}
+      event_bindings: {hide: name}
+    event_bindings: {hide: name}
+    data_bindings: []
+  - type: Button
+    properties: {role: primary-color, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: 'Play?', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_play
+    layout_properties: {grid_position: 'IKDQUB,HDLDIO'}
+    event_bindings: {click: button_play_click}
+  - type: Button
+    properties: {role: primary-color, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Review the rules, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_main
+    layout_properties: {grid_position: 'FIWTCK,AIIEHS'}
+    event_bindings: {click: button_main_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
